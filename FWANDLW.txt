@@ -1,0 +1,24 @@
+DECLARE Str1 : STRING
+DECLARE Str2 : STRING
+DECLARE Str3 : STRING
+DECLARE firstWord : STRING
+DECLARE lastWord : STRING
+
+Str1 = ""
+Str2 = ""
+Str3 = ""
+firstWord = ""
+lastWord = ""
+
+OUTPUT "Enter 1st string: "
+INPUT Str1
+
+OUTPUT "Enter 2nd String: "
+INPUT Str2
+
+firstWord = LEFT(Str1, 5) 
+
+lastWord = RIGHT(Str2, 6)
+
+Str3 = firstWord & ' ' & lastWord
+OUTPUT Str3

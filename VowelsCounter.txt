@@ -1,0 +1,23 @@
+DECLARE str : STRING
+DECLARE Vowel : STRING
+DECLARE count : INTEGER
+DECLARE NoOfVowels : INTEGER
+
+str = ""
+Vowel = "aeiou"
+count = 0
+NoOfVowels = 0
+
+OUTPUT "Enter the string to be checked: "
+INPUT str
+
+str= LOWER(str)
+
+FOR count = 1 to LENGTH(str)
+    IF LOCATE(Vowel, MID(str, count, 1)) > 0
+      THEN
+        NoOfVowels = NoOfVowels + 1     
+    ENDIF
+NEXT
+
+OUTPUT "The No. of Vowels in the entered string is: ", NoOfVowels

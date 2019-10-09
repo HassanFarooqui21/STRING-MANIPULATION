@@ -1,0 +1,30 @@
+DECLARE Aplha : STRING
+DECLARE str1 : STRING
+DECLARE count : INTEGER
+DECLARE pangram : BOOLEAN
+
+Aplha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+str1 = ""
+count = 0
+pangram = #FALSE#
+
+OUTPUT "Enter the string to be checked"
+INPUT str1
+IF LENGTH(str1)>= 26
+  THEN
+    pangram = #TRUE#
+    FOR count = 1 to 26
+        IF LOCATE(str1, MID(Aplha, count, 1))= 0 
+          THEN
+            pangram = #FALSE# 
+            EXITFOR
+        ENDIF
+    NEXT
+ENDIF
+
+IF pangram = #true#
+  THEN
+    OUTPUT "the entered string is a pangram"
+  ELSE
+    OUTPUT "the entered string is not a pangram"
+ENDIF

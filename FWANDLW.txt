@@ -1,0 +1,28 @@
+DECLARE Str1 : STRING
+DECLARE Str2 : STRING
+DECLARE Str3 : STRING
+DECLARE firstWord : STRING
+DECLARE lastWord : STRING
+DECLARE n : INTEGER
+
+Str1 = ""
+Str2 = ""
+Str3 = ""
+firstWord = ""
+lastWord = ""
+n = 0
+
+OUTPUT "Enter 1st string: "
+INPUT Str1
+
+OUTPUT "Enter 2nd String: "
+INPUT Str2
+
+n = LOCATE(Str1, ' ')
+firstWord = LEFT(Str1, n -1)
+
+n = LOCATE(Str2, ' ')
+lastWord = RIGHT(Str2, LENGTH(Str2)-n)
+
+Str3 = firstWord & ' ' & lastWord
+OUTPUT Str3
